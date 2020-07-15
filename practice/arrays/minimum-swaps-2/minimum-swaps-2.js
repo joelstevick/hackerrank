@@ -77,8 +77,6 @@ function minimumSwaps(arr) {
 
     } while (1)
 
-    console.log(swaps)
-
     return swaps;
 }
 
