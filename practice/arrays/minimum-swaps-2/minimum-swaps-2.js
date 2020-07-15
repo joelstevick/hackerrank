@@ -94,4 +94,6 @@ function main() {
     ws.write(res + '\n');
 
     ws.end();
+
+    console.log(res)
 }
