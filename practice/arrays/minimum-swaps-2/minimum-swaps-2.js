@@ -34,7 +34,6 @@ function error(m, mCurPos, n, nCurPos) {
 // scan an array to find the two elements that have the highest combined error
 function findBestPair(arr) {
 
-    let m;
     let currMax = 0;
     let bestPair;
 
