@@ -39,10 +39,8 @@ function findBestPair(arr) {
     let bestPair;
 
     for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-            if (i === j) {
-                continue;
-            }
+        for (let j = i + 1; j < arr.length; j++) {
+
             const m = arr[i];
             const n = arr[j];
 
@@ -52,6 +50,7 @@ function findBestPair(arr) {
                 currMax = err;
                 bestPair = {first: i, second: j};
             }
+
         }
     }
 
