@@ -34,8 +34,8 @@ function error(m, mCurPos, n, nCurPos) {
 // scan an array to find the two elements that have the highest combined error
 function findBestPair(arr) {
 
-    let currMax = 0;
-    let bestPair;
+    let currMax = 1;
+    const bestPair = {};
 
     for (let i = 0; i < arr.length - 1; i++) {
         for (let j = i + 1; j < arr.length; j++) {
@@ -47,7 +47,8 @@ function findBestPair(arr) {
 
             if (err > currMax) {
                 currMax = err;
-                bestPair = {first: i, second: j};
+                bestPair.first = i;
+                bestPair.second = j;
             }
 
         }
@@ -63,7 +64,7 @@ function minimumSwaps(arr) {
 
     do {
         const bestPair = findBestPair(arr);
-        if (!bestPair) {
+        if (bestPair.first === undefined) {
             break;
         }
         // swap
